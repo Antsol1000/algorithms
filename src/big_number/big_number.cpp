@@ -1,5 +1,6 @@
 //
-// Created by antsol on 21.12.2021.
+// Created by Antoni Solarski
+// github.com/Antsol1000
 //
 
 #include <algorithm>
