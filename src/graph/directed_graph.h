@@ -148,7 +148,7 @@ VI digraph<N, E>::kahn_topological_sort() {
     VI result;
     VI in_degrees = get_in_degrees();
 
-    // add nodes without predecessors to queue
+    // push nodes without predecessors to queue
     QI q;
     REP(i, this->size()) {
         if (in_degrees[i] == 0) {
@@ -156,8 +156,8 @@ VI digraph<N, E>::kahn_topological_sort() {
         }
     }
 
-    // poll node from queue, add it to result and "remove" it edges
-    // if some node lost all predecessors then add it to queue
+    // poll node from queue, push it to result and "remove" it edges
+    // if some node lost all predecessors then push it to queue
     while (!q.empty()) {
         int v = q.front();
         q.pop_front();
@@ -194,7 +194,7 @@ bool digraph<N, E>::euler_path(VI &result) {
     QI l;
     l.push_back(v);
     while (!l.empty()) {
-        // if no outgoing undirected_edge, add node to result
+        // if no outgoing undirected_edge, push node to result
         // and go back
         if (in_degrees[l.back()] == 0) {
             v = l.back();

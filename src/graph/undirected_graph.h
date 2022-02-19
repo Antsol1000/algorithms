@@ -143,7 +143,7 @@ bool graph<N, E>::euler_path(VI& result) {
         while (deg[v] > 0 && visited[of[v] + deg[v] - 1]) {
             deg[v]--;
         }
-        // if no edges, poll the node and add to result
+        // if no edges, poll the node and push to result
         if (deg[v] == 0) {
             l.pop_back();
             result.push_back(v);
