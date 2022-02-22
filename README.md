@@ -12,4 +12,4 @@ Efficient implementation of 'find and union' structure with path compression.
 Big number class that allows all simple operations on integers from any range.
 
 ## graph
-Classical graph algorithms with class that can behave like containers and are easy to extend.
+Classical graph algorithms with classes that can behave like containers and are easy to extend.
